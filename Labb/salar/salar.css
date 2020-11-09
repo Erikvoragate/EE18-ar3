@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
 /* Enkel CSS-reset */
 html {
     box-sizing: border-box;
@@ -19,7 +21,7 @@ body {
     margin: 3em auto;
     background: #fff;
     border-radius: 5px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     border: 1px solid #ddd;
     box-shadow: 0 0 12px #f0e9d1;
     color: #4e4e4e;
@@ -73,4 +75,46 @@ h1, h2, h3, p {
 }
 h3 {
     margin-top: 2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+}
+th, td {
+    padding: 0.5em;
+    text-align: left;
+}
+th {
+    background: #305A85;
+    color: #FFF;
+}
+tr:nth-child(even) {
+    background: #E6F2F8;
+}
+tr:nth-child(odd) {
+    background: #FFF;
+}
+table .fa {
+    color: #55a5d2;
+}
+table img {
+    width: 50px;
+}
+table .grön {
+    background: #aeffae;
+}
+table .röd {
+    background: #ffa6a6;
+}
+form img {
+    width: 30px;
+}
+form label {
+    display: flex;
+    align-items:center;
+}
+form span {
+    padding: 10px;
 }

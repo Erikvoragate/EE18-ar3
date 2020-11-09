@@ -9,7 +9,7 @@
 <body>
     <div class="kontainer">
         <?php
-        echo "<h1>Dagens horoskop</h1>";
+        echo "<h1>Dagens horoskop</h1>";q
 
         // Hämta sidan
         $sidan = file_get_contents("https://astro.elle.se");
@@ -29,6 +29,20 @@
         } else {
             echo "<p>Hittade inte horoskopets början!</p>";
         }
+        echo "<p>Horoskopet slutar på position $slut</p>"
+        echo "<p>Hitta slutet på position $slut</p>"
+
+        // första delen före annonsen
+$start = strpos($horoskopText, "<div class="o-indenter">");
+$slut = strpos($horoskopText, "</div>");
+$del1 = substr($horoskopText, $start, $slut - $start);
+echo "$del1</div>\n";
+
+//Andra delen:
+$start = strpos($horoskopText, "<div class="o-indenter">", $slut);
+$slut = strpos($horoskopText, "</div>");
+$del1 = substr($horoskopText, $start, $slut - $start);
+echo "$del1</div>\n";
 
 
         ?>
