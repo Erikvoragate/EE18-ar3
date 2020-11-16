@@ -59,7 +59,26 @@
             } else {
                 echo "<p>&#10005; Innehåller INTE små eller stora boxtäver.</p>";
             }
-            
+            // matcha ordet SAB eller SAAB
+            if (preg_match("/SA{1,2}B/", $text)) {
+                echo "<p>&#10003; Innehåller SAB eller SAAB  .</p>";
+            } else {
+                echo "<p>&#10005; Innehåller INTE SAB eller SAAB .</p>";
+            }
+
+        //Matcha odern Obs eller OBS eller obs 
+        if (preg_match("/obs/i", $text)) {
+            echo "<p>&#10003; Innehåller stora eller små  .</p>";
+        } else {
+            echo "<p>&#10005; Innehåller INTE stora eller små .</p>";
+        }
+        //Matcha en gatuadress tex Sveavägen 12, Sveaväg. 12 
+        if (preg_match("Sveavägen 12|Sveaväg\. 12", $text)) {
+            echo "<p>&#10003; matcha  .</p>";
+        } else {
+            echo "<p>&#10005; matcha ej .</p>";
+        }
+
 
         }
         ?>
